@@ -1,10 +1,13 @@
 
 <template>
   <Wrap>
-    <iframe frameborder="0" id="sc-player"
-        :src="src"
-        @load="forceUpdate"
-        ></iframe>
+    <iframe
+      frameborder="0"
+      id="sc-player"
+      :src="src"
+      @load="forceUpdate"
+      allow="autoplay"
+    ></iframe>
   </Wrap>
 </template>
 

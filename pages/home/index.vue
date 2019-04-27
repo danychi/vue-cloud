@@ -3,9 +3,19 @@
     <InnerWrap>
       <Spinner v-if="isLoading" />
       <div v-else>
-        <featured :element="songs[0]" :onClick="selectSong"/>
-        <filter-bar :filters="genres" :onClick="updateSelectedGenre" :selectedFilter="selectedGenre"/>
-        <grid :elements="selectedSongList" :onClick="selectSong"/>
+        <featured
+          :element="songs[0]"
+          :onClick="selectSong"
+        />
+        <filter-bar
+          :filters="genres"
+          :onClick="updateSelectedGenre"
+          :selectedFilter="selectedGenre"
+        />
+        <grid
+          :elements="selectedSongList"
+          :onClick="selectSong"
+        />
       </div>
     </InnerWrap>
   </Wrap>
@@ -41,7 +51,7 @@ export default {
         : [];
     },
     genres: function() {
-      return removeDuplicates(this.songs, "genre").map(item => item.genre);
+      return removeDuplicates(this.songs, "genre").map(item => item && item.genre);
     },
     ...mapGetters({
       songs: "getSongs",

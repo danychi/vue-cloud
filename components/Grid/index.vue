@@ -1,11 +1,15 @@
 <template>
   <Wrap>
     <ul>
-      <Item v-for="item in elements" v-bind:key="item.id" v-on:click.native="onClick(item)">
-        <Card>
+      <Item
+        v-for="item in elements"
+        v-bind:key="item.id"
+        v-on:click.native="onClick(item)"
+      >
+        <Card v-if="item">
           <nuxt-link to="/song">
             <img :src="item.cover" />
-            <TextWrap> 
+            <TextWrap>
               <p>{{ item.artist }} </p>
               <p>{{ item.title }} </p>
             </TextWrap>
