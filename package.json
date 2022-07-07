@@ -14,7 +14,7 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
-    "moment": "^2.20.1",
+    "moment": "^2.29.4",
     "nuxt": "^1.0.0",
     "prettier-eslint": "^8.8.1",
     "redux-saga": "^0.16.0",
